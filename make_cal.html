@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+    window.onload = function() {
+        draw_cal();
+       // draw_star();
+       send_menu();
+    }
+
+function click_star(num, date)
+{
+    console.log(date);
+    for(var i = 0 ; i < 5; i++){
+        if(i <= num)
+          document.getElementsByClassName('star')[i].style.color = "orange";
+        else
+          document.getElementsByClassName('star')[i].style.color = "black";
+    }
+}
+
+function draw_cal() 
+{
+    var today = new Date();
+    var year = today.getFullYear;
+    var month = today.getMonth() + 1;
+    var innerCal =""; 
+    innerCal +='<table class="calendar">';
+        innerCal +='<tr><th>SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th></tr>';
+    var id_cnt = 0;
+    for(var i =  0 ; i < 6 ; i++) {
+        innerCal += '<tr height = "140">';
+            for(var j = 0 ; j < 7 ; j++)
+             {
+                 innerCal += '<td style="text-overflow:ellipsis;overflow:hidden;white-space:nowrap">';
+                    innerCal += '<div id ="day_' + id_cnt +'"></div>';
+                    innerCal += '<div id = "menu_' + id_cnt +'">메뉴</div>';
+                  innerCal += '</td>';
+                id_cnt++;
+             }
+        innerCal += '</tr>'
+    }
+    innerCal += '</table>'
+    document.getElementById('draw_cal').innerHTML = innerCal;
+}
+
+function draw_star()
+{
+    for(var j = 0 ; j < 42 ; j++) {
+        var id ="menu_";
+            id += j;
+        for(var i = 0 ; i < 5 ; i++) {
+            var star = document.createElement('span');
+            star.className = i;
+            star.addEventListener('click', () => console.log(star.className)); // 이벤트는 마지막에 생성된 이벤트로 구현되는 듯 하다.
+           star.innerHTML = '★';
+            document.getElementById(id).appendChild(star);
+        }
+    }
+}
+
+function send_menu ()
+{
+    var parent_id = "menu_";
+    for(var j = 0 ; j < 42 ; j++) {
+        var id ="menu_";
+            id += j;
+       var n_id = id + '_Form';
+        var newForm = document.createElement('form');
+        newForm.setAttribute("id",n_id);
+        newForm.name = "newform";
+        newForm.method = "post";
+        newForm.action = "http://localhost:3000/send_";
+        newForm.target = '_blank';
+
+        var input1 = document.createElement('input');
+        input1.setAttribute("type", "hidden");
+        input1.setAttribute("name", "menu");
+        input1.setAttribute("value",document.getElementById(id).childNodes[0].textContent);
+        var but = document.createElement('button');
+        but.innerHTML = "Good";
+        but.onclick = function() {
+            var txt = "AAA";
+            console.log(txt);
+            newForm.submit();
+        }
+        var but2 = document.createElement('button');
+        but2.innerHTML = "Soso";
+        but2.onclick = function() {
+            var txt = "AAA";
+            console.log(txt);s
+            newForm.submit();
+        }   
+        var but3 = document.createElement('button');
+        but3.innerHTML = "Bed";
+        but3.onclick = function() {
+            var txt = "AAA";
+            console.log(txt);
+            newForm.submit();
+        }
+        newForm.appendChild(input1);
+        newForm.appendChild(but);
+        newForm.innerHTML += ' ';
+        newForm.appendChild(but2);
+        newForm.innerHTML += ' ';
+        newForm.appendChild(but3);
+        document.getElementById(id).appendChild(newForm);
+    }
+}
+</script>
+
+
+<style>
+    table.calendar {
+        border : 1px solid black;
+        display : inline-table;
+        text-align : left;
+    }
+    table.calendar td{
+        vertical-align: top;
+        border : 1px solid skyblue;
+        width : 160px;
+    }
+
+</style>
+</head>
+
+<body>
+<div id = "draw_cal">
+
+</div>
+
+<div class = "starRating">
+    <span id = "star1" class="star" onclick = "click_star(0, this.parentNode.parentNode.id)">★</span>
+    <span id = "star2" class="star" onclick = "click_star(1)">★</span>
+    <span id = "star3" class="star" onclick = "click_star(2)">★</span>
+    <span id = "star4" class="star" onclick = "click_star(3)">★</span>
+    <span id = "star5" class="star" onclick = "click_star(4)">★</span>
+</div>
+
+</div>
+</body>
+</html>
