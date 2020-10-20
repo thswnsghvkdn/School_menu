@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .tabInfo .s_txt {margin:0 0 10px; height:13px; clear:both;}
+        .tabInfo .recipePlus	{clear:both; float:left; position:relative; width:750px; font:normal 12px/120% 'Dotum'; letter-spacing:0px; color:#4b4b4b; margin-bottom:20px;/* padding-bottom:20px; border-bottom:1px solid #f2f2f2; */}
+        .tabInfo .recipePlus dt {font-size:13px; font-weight:bold; color:#444; margin:0 0 10px; line-height:18px; background:#f8f8f8; padding:5px 10px; border:1px solid #e8e8e8; }
+        .tabInfo .recipePlus dd {font-size:12px;  color:#888; margin:0 0 7px 10px;}
+        .wrap_top {width:750px; overflow:hidden; position:relative; margin-bottom:5px; margin:20px 0 15px; border-bottom:2px solid #626262;}
+        .wrap_top h2 { display:inline-block; font-size:35px; font-weight:bold; position:relative; top:0px; left:0px; letter-spacing:-4px; color:#444;}
+        .wrap_info {width:750px; float:left; display:block; position:relative; margin-bottom:60px; z-index:30;}
+        .wrap_food, .wrap_recipe, .wrap_review {width:750px; float:left; display:block; position:relative; margin-bottom:90px;}
+
+
+        .areaThumbnail	{float:left; width:300px;}
+        .areaThumbnail dl {position:relative;}
+        .areaThumbnail dl dt	{width:300px; height:300px; background:#f5f5f5;}
+        .areaThumbnail dl dt .img {width:300px; height:300px;}
+
+        .areaBasic 	{position:relative; float:right; width:430px; margin:15px 10 10px 10; display:inline; }
+        .areaBasic dl			{width:430px;}
+        .areaBasic dl dt	{float:left; width:85px; font:normal 15px/150% 'Dotum'; letter-spacing:0px; color:#6079a8;}
+        .areaBasic dl dd	{float:right; font:normal 12px/150% 'Dotum'; letter-spacing:0px; color:#4b4b4b;}
+
+        .areaBasic .restType	{float:left; width:430px; margin:0 0 18px 0; padding-left: 50px;}
+        .areaBasic .restType .type	{width:345px;  font:bold 15px/150% 'Dotum'; }
 
     </style>
 
@@ -94,67 +116,65 @@
             </dl>
         </div>
     </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <div calss = "wrap_food">
         <h3>재료정보</h3>
         <div class = "infoTable">
             <ul class = "tableLR">
                 <li>
                     <dl>
-                        <dt>재료</dt>
-                        <dd>샬롯 70g(5개), 건고추 5g(1개), 당근 30g(1/4개), 삼겹살 350g, 마늘 5g(1개), 설탕 30g(2큰술), 양송이버섯 70g(3개), 오렌지주스 400g(2컵), 월계수잎 2g(1개), 청경채 70g, 청주 150g(¾컵), 후춧가루 2g(1/2작은술) 비트졸임 비트 30g, 식초 60g(4큰술), 설탕 20g(4작은술) 소스 발사믹식초 50g(1/4컵), 꿀 30g(2큰술), 아몬드 10g(3개), 샬롯 30g(2개), 마늘 5g(1개), 오렌지 140g(1/2개)</dd>
+                        샬롯 70g(5개), 건고추 5g(1개), 당근 30g(1/4개), 삼겹살 350g, 마늘 5g(1개), 설탕 30g(2큰술), 양송이버섯 70g(3개),<br>
+                        오렌지주스 400g(2컵), 월계수잎 2g(1개), 청경채 70g, 청주 150g(¾컵), 후춧가루 2g(1/2작은술) 비트졸임 비트 30g, <br>
+                        식초 60g(4큰술), 설탕 20g(4작은술) 소스 발사믹식초 50g(1/4컵), 꿀 30g(2큰술), 아몬드 10g(3개), 샬롯 30g(2개), 마늘 5g(1개), 오렌지 140g(1/2개)</dd>
                     </dl>
                 </li>
             </ul>
         </div>
     </div>
+
     <div class = "wrap_recipe">
         <div class = "tabInfo">
             <h3>레시피정보</h3>
+            <hr>
             <p class = "s_txt"> 레시피 </p>
             <dl class = "recipePlus">
                 <div id = "id_g_pg1" type = "text" style = "display : none;">2</div>
                 <dt>1. 삼겹살에 설탕, 건고추, 후춧가루, 월계수잎, 다진 샬롯과 마늘을 넣어 재 운다.</dt>
-                <img class ="img" src ="http://www.foodsafetykorea.go.kr/uploadimg/cook/과정1_돈수육,해물냉채.jpg">
             </dl>
             <dl class = "recipePlus">
                 <div id = "id_g_pg2" type = "text" style = "display : none;">2</div>
                 <dt>2. 가열된 팬에 삼겹살을 굽다가 청주를 넣어 알코올을 날린 후 오렌지주스 와 물을 넣어 졸인다.</dt>
-                <img class ="img" src = "http://www.foodsafetykorea.go.kr/uploadimg/cook/과정2_돈수육,해물냉채.jpg">
+                <img class ="r_img" src = "http://www.foodsafetykorea.go.kr/uploadimg/cook/20_00572_1.png" height="180" width="200">
             </dl>
             <dl class = "recipePlus">
                 <div id = "id_g_pg3" type = "text" style = "display : none;">2</div>
                 <dt>3. 비트는 0.5×0.5×0.5cm로 썰어 설탕과 식초를 넣어 졸인다</dt>
-                <img class ="img" src ="http://www.foodsafetykorea.go.kr/uploadimg/cook/과정3_돈수육,해물냉채.jpg">
+                <img class ="r_img" src ="http://www.foodsafetykorea.go.kr/uploadimg/cook/20_00182_3.png"height="180" width="200">
             </dl>
             <dl class = "recipePlus">
                 <div id = "id_g_pg4" type = "text" style = "display : none;">2</div>
                 <dt>4. 청경채는 끓는 물에 데쳐 찬물에 헹군다.</dt>
-                <img class ="img" src ="http://www.foodsafetykorea.go.kr/uploadimg/cook/과정4_돈수육,해물냉채.jpg">
             </dl>
             <dl class = "recipePlus">
                 <div id = "id_g_pg5" type = "text" style = "display : none;">2</div>
                 <dt>5. 청경채, 양송이버섯, 당근, 샬롯은 가열된 팬에 오일을 두르고 굽는다.</dt>
-                <img class ="img" src ="http://www.foodsafetykorea.go.kr/uploadimg/cook/과정5_돈수육,해물냉채.jpg">
             </dl>
             <dl class = "recipePlus">
                 <div id = "id_g_pg6" type = "text" style = "display : none;">2</div>
                 <dt>6. 샬롯, 마늘, 아몬드는 다진다.</dt>
-                <img class ="img" src ="http://www.foodsafetykorea.go.kr/uploadimg/cook/과정6_돈수육,해물냉채.jpg">
+                <img class ="r_img" src ="http://www.foodsafetykorea.go.kr/uploadimg/cook/20_00182_6.png"height="180" width="200">
             </dl>
             <dl class = "recipePlus">
                 <div id = "id_g_pg6" type = "text" style = "display : none;">2</div>
                 <dt>7. 발사믹식초를 끓이다가 꿀을 넣고 샬롯, 마늘, 아몬드를 넣는다.</dt>
-                <img class ="img" src ="http://www.foodsafetykorea.go.kr/uploadimg/cook/과정6_돈수육,해물냉채.jpg">
             </dl>
             <dl class = "recipePlus">
                 <div id = "id_g_pg6" type = "text" style = "display : none;">2</div>
                 <dt>8. 7에 오렌지 과육을 넣는다.</dt>
-                <img class ="img" src ="http://www.foodsafetykorea.go.kr/uploadimg/cook/과정6_돈수육,해물냉채.jpg">
             </dl>
             <dl class = "recipePlus">
                 <div id = "id_g_pg6" type = "text" style = "display : none;">2</div>
                 <dt>9. 삼겹살을 1cm로 잘라 비트, 청경채, 양송이버섯, 당근, 샬롯과 소스를 함 께 곁들인다.</dt>
-                <img class ="img" src ="http://www.foodsafetykorea.go.kr/uploadimg/cook/과정6_돈수육,해물냉채.jpg">
             </dl>
         </div>
     </div>
